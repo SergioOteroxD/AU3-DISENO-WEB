@@ -1,0 +1,21 @@
+/* Archivo: styles.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #007bff;
+}
+
+footer {
+    background-color: #343a40;
+}
+
+button {
+    background-color: #28a745;
+    border: none;
+}
+
+button:hover {
+    background-color: #218838;
+}

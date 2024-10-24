@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulario de Contacto</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="bg-primary text-white text-center py-3">
+        <h1>Formulario de Contacto</h1>
+        <p>Deja tus datos y te contactaremos lo antes posible</p>
+    </header>
+
+    <!-- Cuerpo de la página -->
+    <main class="container my-5">
+        <form id="contactForm" class="needs-validation" novalidate>
+            <div class="form-row">
+                <!-- Nombre -->
+                <div class="form-group col-md-6">
+                    <label for="inputName">Nombre</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Tu nombre" required>
+                    <div class="invalid-feedback">Por favor, ingresa tu nombre.</div>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group col-md-6">
+                    <label for="inputEmail">Correo electrónico</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Tu correo" required>
+                    <div class="invalid-feedback">Por favor, ingresa un correo válido.</div>
+                </div>
+            </div>
+
+            <!-- Asunto -->
+            <div class="form-group">
+                <label for="inputSubject">Asunto</label>
+                <select id="inputSubject" class="form-control" required>
+                    <option value="" disabled selected>Elige un asunto</option>
+                    <option value="consulta">Consulta</option>
+                    <option value="soporte">Soporte Técnico</option>
+                    <option value="otro">Otro</option>
+                </select>
+                <div class="invalid-feedback">Por favor, selecciona un asunto.</div>
+            </div>
+
+            <!-- Mensaje -->
+            <div class="form-group">
+                <label for="inputMessage">Mensaje</label>
+                <textarea class="form-control" id="inputMessage" rows="5" placeholder="Escribe tu mensaje" required></textarea>
+                <div class="invalid-feedback">Por favor, escribe tu mensaje.</div>
+            </div>
+
+            <!-- Preferencia de contacto -->
+            <div class="form-group">
+                <label>¿Cómo prefieres ser contactado?</label>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="contactPreference" id="emailContact" value="email" checked>
+                    <label class="form-check-label" for="emailContact">Correo electrónico</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="contactPreference" id="phoneContact" value="phone">
+                    <label class="form-check-label" for="phoneContact">Teléfono</label>
+                </div>
+            </div>
+
+            <!-- Notificaciones -->
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="subscribe" required>
+                <label class="form-check-label" for="subscribe">Acepto recibir notificaciones</label>
+                <div class="invalid-feedback">Debes aceptar para continuar.</div>
+            </div>
+
+            <!-- Botón de enviar -->
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Formulario de Contacto. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Bootstrap JS y validación personalizada -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
